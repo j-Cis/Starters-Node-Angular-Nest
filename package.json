@@ -46,11 +46,11 @@
     "webpack-node-externals": "1.7.2"
   },
   "scripts": {
-    "A:build": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js\"",
-    "A:dev": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js --watch\"",
-    "A:start": "concurrently \"node ./packages/A-nest-webpack/dist/server\" \"open-cli http://localhost:3000/\"",
-    "A:start_dev": "concurrently \"npm run A:dev\" \"npm run A:start\"",
-    "A:start_prod": "concurrently \"npm run A:build\" \"npm run A:start\""
+    "A_build": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js\"",
+    "A_dev": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js --watch\"",
+    "A_start": "concurrently \"node ./packages/A-nest-webpack/dist/server\" \"open-cli http://localhost:3000/\"",
+    "A_start_dev": "concurrently \"npm run A_dev\" \"npm run A_start\"",
+    "A_start_prod": "concurrently \"npm run A_build\" \"npm run A_start\""
   },
   "repository": {
     "type": "git",
