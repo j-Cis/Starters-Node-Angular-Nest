@@ -33,3 +33,15 @@ this is working and is modifed from https://github.com/nestjs/nest/tree/master/s
 },
 ```
 ----
+### C-nest-static [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/C-nest-static)
+this is working and is from https://github.com/nestjs/nest/tree/master/sample/24-serve-static
+
+### [GOBACK2ROOT](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master)
+```JSON
+"scripts": {
+    "C_build": "concurrently \"rimraf ./packages/C-nest-static/dist/*\"  \"tsc -p packages/C-nest-static/tsconfig.build.json\"",
+    "C_start": "concurrently \"open-cli http://localhost:3000/\"  \"node packages/C-nest-static/dist/main.js\"",
+    "C_COMBO_dev": "concurrently \"rimraf ./packages/C-nest-static/dist/*\" \"open-cli http://localhost:3000/\" \"ts-node -p packages/C-nest-static/src/main\" "
+},
+```
+----

@@ -40,7 +40,7 @@
     "rimraf": "^2.6.3",
     "sass": "^1.22.9",
     "ts-loader": "6.0.4",
-    "ts-node": "8.3.0",
+    "ts-node": "^8.3.0",
     "tslint": "5.18.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-loader": "^3.5.4",
@@ -59,7 +59,10 @@
     "B_dev": "concurrently \"rimraf ./packages/B-nest-sqlite/dist/*\" \"rimraf ./packages/B-nest-sqlite/data/*\"  \"ts-node packages/B-nest-sqlite/src/main\"",
     "B_prestart_dev": "ts-node packages/B-nest-sqlite/src/main",
     "B_prestart_build": "node packages/B-nest-sqlite/dist/main.js",
-    "B_start": "open-cli http://localhost:3001/"
+    "B_start": "open-cli http://localhost:3001/",
+    "C_build": "concurrently \"rimraf ./packages/C-nest-static/dist/*\"  \"tsc -p packages/C-nest-static/tsconfig.build.json\"",
+    "C_start": "concurrently \"open-cli http://localhost:3000/\"  \"node packages/C-nest-static/dist/main.js\"",
+    "C_COMBO_dev": "concurrently \"rimraf ./packages/C-nest-static/dist/*\" \"open-cli http://localhost:3000/\" \"ts-node -p packages/C-nest-static/src/main\" "
   },
   "repository": {
     "type": "git",
