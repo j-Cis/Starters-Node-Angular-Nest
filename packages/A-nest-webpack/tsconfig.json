@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "strict": true,
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationMap": true,
+        "declarationDir": "./dist/declarations",
+        "sourceMap": true,
+        "removeComments": true,
+        "downlevelIteration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2017",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "emitBOM": true,
+        "lib": ["esnext", "dom"],
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "outDir": "./dist",
+        "incremental": true,
+        "esModuleInterop": true,
+        "baseUrl": "./"
+    },
+    "exclude": ["node_modules", "dist", "**/*spec.ts"]
+}

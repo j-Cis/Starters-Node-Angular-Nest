@@ -1,0 +1,1 @@
+{"version":3,"file":"server.controller.d.ts","sourceRoot":"","sources":["../../src/server/server.controller.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,gBAAgB,EAAE,MAAM,kBAAkB,CAAC;AAEpD,qBACa,mBAAmB;IACnB,OAAO,CAAC,QAAQ,CAAC,UAAU;gBAAV,UAAU,EAAE,gBAAgB;IAGzD,QAAQ,IAAI,MAAM;CAGlB"}

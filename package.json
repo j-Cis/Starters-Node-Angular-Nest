@@ -1,27 +1,66 @@
 {
-  "name": "Starter-Nest-Angular-Webpack",
+  "name": "starters-node-angular-nest",
   "version": "1.0.0",
-  "description": "Starter-Nest-Angular-Webpack",
-  "license": "MIT",
-  "scripts": {
-   "start": "concurrently  \"webpack --config src/server.webpack.config.js\"  \"node dist/server/server\""
-  },
+  "description": "",
   "dependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/compiler": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "@angular/forms": "^8.2.0",
+    "@angular/platform-browser": "^8.2.0",
+    "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/router": "^8.2.0",
     "@nestjs/common": "6.5.3",
     "@nestjs/core": "6.5.3",
     "@nestjs/platform-express": "6.5.3",
+    "@nestjs/serve-static": "^1.0.1",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.9.1",
+    "core-js": "^3.1.4",
+    "file-type": "^12.1.0",
+    "open": "^6.4.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.5.2",
-    "typescript": "3.5.3"
+    "rxjs-compat": "^6.5.2",
+    "typescript": "3.5.3",
+    "zone.js": "^0.10.1"
   },
   "devDependencies": {
     "@types/node": "12.7.1",
+    "angular2-template-loader": "^0.6.2",
     "concurrently": "^4.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.19.1",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "open-cli": "^5.0.0",
+    "raw-loader": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "sass": "^1.22.9",
     "ts-loader": "6.0.4",
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
+    "tslint-loader": "^3.5.4",
     "webpack": "4.39.1",
     "webpack-cli": "3.3.6",
+    "webpack-dev-server": "^3.7.2",
     "webpack-node-externals": "1.7.2"
-  }
+  },
+  "scripts": {
+    "A:build": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js\"",
+    "A:dev": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js --watch\"",
+    "A:start": "concurrently \"node ./packages/A-nest-webpack/dist/server\" \"open-cli http://localhost:3000/\"",
+    "A:start_dev": "concurrently \"npm run A:dev\" \"npm run A:start\"",
+    "A:start_prod": "concurrently \"npm run A:build\" \"npm run A:start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CisSasGot/Starters-Node-Angular-Nest.git"
+  },
+  "keywords": [],
+  "author": "CisSasGot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CisSasGot/Starters-Node-Angular-Nest/issues"
+  },
+  "homepage": "https://github.com/CisSasGot/Starters-Node-Angular-Nest#readme"
 }

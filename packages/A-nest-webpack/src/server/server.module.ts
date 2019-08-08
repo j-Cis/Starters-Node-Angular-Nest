@@ -3,8 +3,8 @@ import { AppServerController } from './server.controller';
 import { AppServerService } from './server.service';
 
 @Module({
-  imports: [],
-  controllers: [AppServerController],
-  providers: [AppServerService],
+	imports: [],
+	controllers: [ AppServerController ],
+	providers: [ AppServerService ]
 })
 export class AppServerModule {}
