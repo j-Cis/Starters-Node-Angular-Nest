@@ -14,6 +14,7 @@
     "@nestjs/core": "6.5.3",
     "@nestjs/platform-express": "6.5.3",
     "@nestjs/serve-static": "^1.0.1",
+    "@nestjs/typeorm": "^6.1.3",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.9.1",
     "core-js": "^3.1.4",
@@ -22,6 +23,8 @@
     "reflect-metadata": "0.1.13",
     "rxjs": "6.5.2",
     "rxjs-compat": "^6.5.2",
+    "sqlite3": "^4.0.9",
+    "typeorm": "^0.2.18",
     "typescript": "3.5.3",
     "zone.js": "^0.10.1"
   },
@@ -39,6 +42,7 @@
     "ts-loader": "6.0.4",
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
+    "tslint-config-standard": "^8.0.1",
     "tslint-loader": "^3.5.4",
     "webpack": "4.39.1",
     "webpack-cli": "3.3.6",
@@ -49,8 +53,13 @@
     "A_build": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js\"",
     "A_dev": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js --watch\"",
     "A_start": "concurrently \"node ./packages/A-nest-webpack/dist/server\" \"open-cli http://localhost:3000/\"",
-    "A_start_dev": "concurrently \"npm run A_dev\" \"npm run A_start\"",
-    "A_start_prod": "concurrently \"npm run A_build\" \"npm run A_start\""
+    "A_COMBO_build_and_start": "concurrently \"npm run A_build\" \"npm run A_start\"",
+    "A_COMBO_dev_and_start": "concurrently \"npm run A_dev\" \"npm run A_start\"",
+    "B_build": "concurrently \"rimraf ./packages/B-nest-sqlite/dist/*\" \"rimraf ./packages/B-nest-sqlite/data/*\"  \"tsc -p packages/B-nest-sqlite/tsconfig.build.json\"",
+    "B_dev": "concurrently \"rimraf ./packages/B-nest-sqlite/dist/*\" \"rimraf ./packages/B-nest-sqlite/data/*\"  \"ts-node packages/B-nest-sqlite/src/main\"",
+    "B_prestart_dev": "ts-node packages/B-nest-sqlite/src/main",
+    "B_prestart_build": "node packages/B-nest-sqlite/dist/main.js",
+    "B_start": "open-cli http://localhost:3001/"
   },
   "repository": {
     "type": "git",
