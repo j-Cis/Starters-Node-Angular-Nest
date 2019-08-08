@@ -4,9 +4,7 @@
   "description": "Starter-Nest-Angular-Webpack",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server/server",
-    "dev": "webpack --config src/server.webpack.config.js --watch",
-    "build": "webpack --config src/server.webpack.config.js"
+   "start": "concurrently  \"webpack --config src/server.webpack.config.js\"  \"node dist/server/server\""
   },
   "dependencies": {
     "@nestjs/common": "6.5.3",
@@ -18,6 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "12.7.1",
+    "concurrently": "^4.1.1",
     "ts-loader": "6.0.4",
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
