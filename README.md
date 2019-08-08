@@ -9,7 +9,7 @@ npm i
 ----
 
 ### A-nest-webpack (very simple solution) [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/A-nest-webpack)
-this is working and is modifed from https://github.com/nestjs/nest/tree/master/sample/08-webpack
+:beers: this is working and is modifed from https://github.com/nestjs/nest/tree/master/sample/08-webpack
 ```JSON
 "scripts": {
     "A_build": "concurrently \"rimraf ./packages/A-nest-webpack/dist/*\" \"webpack --config packages/A-nest-webpack/webpack.config.js\"",
@@ -34,7 +34,7 @@ this is working and is modifed from https://github.com/nestjs/nest/tree/master/s
 ```
 ----
 ### C-nest-static [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/C-nest-static)
-this is working and is from https://github.com/nestjs/nest/tree/master/sample/24-serve-static
+:beers: this is working and is from https://github.com/nestjs/nest/tree/master/sample/24-serve-static
 
 ### [GOBACK2ROOT](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master)
 ```JSON
