@@ -36,7 +36,6 @@ npm i
 ### C-nest-static [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/C-nest-static)
 :beers: this is working and is from https://github.com/nestjs/nest/tree/master/sample/24-serve-static
 
-### [GOBACK2ROOT](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master)
 ```JSON
 "scripts": {
     "C_build": "concurrently \"rimraf ./packages/C-nest-static/dist/*\"  \"tsc -p packages/C-nest-static/tsconfig.build.json\"",
