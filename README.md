@@ -1,11 +1,30 @@
 # Starters-Node-Angular-Nest
 
 ----
+## TO DO:
+- the target structure
+    ```
+    .
+    ├── [dist]
+    │    ├── [client]
+    │    ├── [server]
+    │    └── [shared]
+    ├── [src]
+    │    ├── [client]
+    │    ├── [server]
+    │    └── [shared]
+    ├── webpack.dev.config.js
+    ├── webpack.prod.config.js
+    ├── webpack.watch.config.js
+    ├── package.json
+    ├── tsconfig.json
+    └── README.md
+    ```
+-  server Nest with Angular and handling SQLite, and build gui frame nw / elecetron
 
-```cmd
-# Install
-npm i
-```
+## ON THIS MOMENT
+- npm run build - to build nest-static and angular separately.
+- npm run start
 ----
 
 ### A-nest-webpack (very simple solution) [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/A-nest-webpack)
@@ -41,6 +60,24 @@ npm i
     "C_build": "concurrently \"rimraf ./packages/C-nest-static/dist/*\"  \"tsc -p packages/C-nest-static/tsconfig.build.json\"",
     "C_start": "concurrently \"open-cli http://localhost:3000/\"  \"node packages/C-nest-static/dist/main.js\"",
     "C_COMBO_dev": "concurrently \"rimraf ./packages/C-nest-static/dist/*\" \"open-cli http://localhost:3000/\" \"ts-node -p packages/C-nest-static/src/main\" "
+},
+```
+----
+----
+### D-webpack-nest-angular-static [GO2SRC](https://github.com/CisSasGot/Starters-Node-Angular-Nest/tree/master/packages/D-webpack-nest-angular-static)
+this is working ony client and  is from https://angular-guru.com/blog/angular-webpack
+
+```JSON
+"scripts": {
+    "D_build_client_dev_cli": "ng build",
+    "D_build_client_prod_cli": "ng build --prod",
+    "D_build_clean_dev": "rimraf ./packages/D-webpack-nest-angular-static/build/dev/*",
+    "D_build_clean_prod": "rimraf ./packages/D-webpack-nest-angular-static/build/dev/*",
+    "D_build_client_prod_webpack": "webpack --config packages/D-webpack-nest-angular-static/client/webpack.production.config.js",
+    "D_build_client_dev_webpack": "webpack --config packages/D-webpack-nest-angular-static/client/webpack.config.js",
+    "noD_build_server_dev_webpack": "webpack --config packages/D-webpack-nest-angular-static/server/webpack.config.js",
+    "noD_build_prestart_dev": "node packages/D-webpack-nest-angular-static/build/dev/server.js",
+    "noD_build_start_dev": "open-cli http://localhost:3000/"
 },
 ```
 ----
